@@ -1,15 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Exemplo JavaScript</title>
-    </head>
-    <body>
-        <h1 id="h1Text">Hello World</h1>
-        <input id="inputText" type="text">
-        <button id="btTrocaText">Trocar Texto</button>
-    </body>
-    <script src="script.js"></script>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trabalho 2B</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+    <div class="container">
+        <h1>Trabalho</h1>
+
+        <section>
+            <h2>1. Verificador de Triângulo</h2>
+            <label>Lado X: <input type="number" id="ladoX"></label>
+            <label>Lado Y: <input type="number" id="ladoY"></label>
+            <label>Lado Z: <input type="number" id="ladoZ"></label>
+            <button onclick="verificarTriangulo()">Verificar</button>
+            <div id="resTriangulo" class="resultado"></div>
+        </section>
+
+        <section>
+            <h2>2. Calculadora de IMC</h2>
+            <label>Peso (kg): <input type="number" id="peso"></label>
+            <label>Altura (m): <input type="number" step="0.01" id="altura"></label>
+            <button onclick="calcularIMC()">Calcular IMC</button>
+            <div id="resIMC" class="resultado"></div>
+        </section>
+
+        <section>
+            <h2>3. Calculadora de Impostos (DETRAN)</h2>
+            <label>Ano do veículo: <input type="number" id="anoVeiculo"></label>
+            <label>Valor do veículo (R$): <input type="number" id="valorVeiculo"></label>
+            <button onclick="calcularImposto()">Calcular Imposto</button>
+            <div id="resImposto" class="resultado"></div>
+        </section>
+
+        <section>
+            <h2>4. Calculadora de Salário</h2>
+            <label>Salário Atual (R$): <input type="number" id="salario"></label>
+            <label>Cargo:
+            <select id="cargo">
+                <option value="gerente">Gerente (10%)</option>
+                <option value="engenheiro">Engenheiro (20%)</option>
+                <option value="tecnico">Técnico (30%)</option>
+                <option value="outro">Outro (40%)</option>
+            </select>
+            </label>
+            <button onclick="calcularSalario()">Calcular Salário</button>
+            <div id="resSalario" class="resultado"></div>
+        </section>
+
+        <section>
+            <h2>5. Calculadora de Crédito Bancário</h2>
+            <label>Saldo Médio (R$): <input type="number" id="saldoMedio"></label>
+            <button onclick="calcularCredito()">Calcular Crédito</button>
+            <div id="resCredito" class="resultado"></div>
+        </section>
+
+        <section>
+            <h2>6. Lanchonete</h2>
+            <label>Código do Item:
+              <select id="codigoLanche">
+                <option value="100">100 - Cachorro Quente (R$ 1.20)</option>
+                <option value="101">101 - Bauru Simples (R$ 1.30)</option>
+                <option value="102">102 - Bauru com Ovo (R$ 1.50)</option>
+                <option value="103">103 - Hambúrguer (R$ 1.20)</option>
+                <option value="104">104 - Cheeseburguer (R$ 1.30)</option>
+                <option value="105">105 - Refrigerante (R$ 1.00)</option>
+              </select>
+            </label>
+            <label>Quantidade: <input type="number" id="quantidadeLanche"></label>
+            <button onclick="calcularLanche()">Calcular</button>
+            <p id="resultadoLanche"></p>
+          </section>
+        
+          <section>
+            <h2>7. Sistema de Vendas</h2>
+            <label>Preço do produto: <input type="number" id="precoProduto"></label>
+            <label>Condição de pagamento:
+              <select id="condicaoPagamento">
+                <option value="a">À vista dinheiro/cheque (10% desconto)</option>
+                <option value="b">À vista cartão (15% desconto)</option>
+                <option value="c">2x sem juros</option>
+                <option value="d">2x com juros (10%)</option>
+              </select>
+            </label>
+            <button onclick="calcularVenda()">Calcular Valor Final</button>
+            <p id="resultadoVenda"></p>
+          </section>
+        
+          <section>
+            <h2>8. Pagamento de Professor</h2>
+            <label>Nível:
+              <select id="nivelProfessor">
+                <option value="1">Nível 1 (R$12/h)</option>
+                <option value="2">Nível 2 (R$17/h)</option>
+                <option value="3">Nível 3 (R$25/h)</option>
+              </select>
+            </label>
+            <label>Horas por semana: <input type="number" id="horasSemana"></label>
+            <button onclick="calcularSalarioProfessor()">Calcular Salário</button>
+            <p id="resultadoProfessor"></p>
+          </section>
+
+    </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
